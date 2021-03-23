@@ -1,0 +1,47 @@
+Abstraction:
+Tảo biển: cho 2 số n và k, cho dãy số 1,2,5,13,34,..., hãy tìm tích của số thứ k trong dãy số và n
+Trạm thu phí: Cho 1 mảng, hãy tìm phần tử thứ a và b sao cho tổng của những phần tử giữa chúng có giá trị lớn nhất 
+
+
+Pattern Recognition:
+
+Tảo biển: interation 
+Trạm thu phí: linear programming 
+
+Algorithm designed:
+Tảo biển
+Nếu n = 0 
+	Trả về 0
+tạo biến 
+	a và b, gán giá trị 0 và 1
+Lặp lại n-1 lần 
+	a=b
+	b=a+b
+trả về b*k
+
+Trạm thu phí:
+
+Tạo biến 
+	max_so_far bằng giá trị âm nhỏ nhất 
+	start,end,s,max_end_here = 0
+Lặp từng phần tử trong mảng:
+	max_end_here = max_end_here + phần tử thứ trong mảng 
+	nếu max_so_far < max_end_here
+		max_so_far = max_end_here
+		start = s 
+		end = i
+	nếu max_end_here < 0 
+		max_end_here = 0
+		s = s + 1
+	Trả về start+1, end+1, max_so_far
+
+Độ phức tạp:
+Tảo biển:
+	time complexity:O(n)
+	space complexity:O(1)
+Trạm thu phí:	
+	time complexity:O(n)
+	space complexity:O(1)
+
+
+
